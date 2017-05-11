@@ -1,0 +1,42 @@
+---
+layout: page
+title: Blog
+---
+
+
+
+<ul class="blog-list">
+  {% for post in paginator.posts %}
+    <li>
+      <h3><a href="{{ post.url }}">{{ post.title }}</h3>
+      <img src="{{ site.baseurl }}/img/blog/{{ post.image }}"></a>
+      {{ post.content | strip_html | truncatewords: 80 }}
+      <a class="link-button" href="{{ post.url }}">Read more</a>
+    </li>
+  {% endfor %}
+</ul>
+
+
+
+<!-- <ul class="blog-list">
+  {% for post in paginator.posts %}
+    <li>
+      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+      {{ post.content | truncatewords: 80 }}
+      <a class="link-button" href="{{ post.url }}">Read more</a>
+    </li>
+  {% endfor %}
+</ul> -->
+
+
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+
+  {% endif %}
+  <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+
+  {% endif %}
+</div>
