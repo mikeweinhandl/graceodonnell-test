@@ -155,11 +155,11 @@ main, nav {
 
 /* hero section */
 .hero {
-  height: 90rem;
+  height: 30rem;
   padding: 1rem;
 
   background-color: #eaeaea;
-  background-image: url("/img/hero.jpg");
+  background-image: url("../img/hero.jpg");
   background-position: center;
   background-size: cover;
 }
