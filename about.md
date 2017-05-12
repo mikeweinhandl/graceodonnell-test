@@ -5,7 +5,7 @@ permalink: /about/
 ---
 
 
-<img alt="Grace O Donnell" src="/img/grace-about.jpg">
+<img alt="Grace O Donnell" src="img/grace-about.jpg">
 
 I worked in brand management for several years before concentrating solely on filmmaking. Marketing experience combined with strong people skills means that I’m particularly good at really understanding your needs and translating them into a scintillating visual story.
 
