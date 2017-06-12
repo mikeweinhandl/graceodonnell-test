@@ -4,17 +4,44 @@ title: Blog
 ---
 
 
+<!--
+<ul class="blog-list">
+  {% for post in paginator.posts %}
+    <li>
+      <h3><a href="{{ post.url }}">{{ post.title }}</h3>
+      <img src="{{ site.baseurl }}/img/blog/{{ post.image }}"></a>
+      {{ post.excerpt | strip_html | truncatewords: 60}}
+      <a class="link-button" href="{{ post.url }}">Read more</a>
+    </li>
+  {% endfor %}
+</ul> -->
+
+
+
 
 <ul class="blog-list">
   {% for post in paginator.posts %}
     <li>
       <h3><a href="{{ post.url }}">{{ post.title }}</h3>
       <img src="{{ site.baseurl }}/img/blog/{{ post.image }}"></a>
-      {{ post.content | strip_html | truncatewords: 80 }}
+      {{ post.excerpt | strip_html | markdownify | truncatewords: 60 }}
       <a class="link-button" href="{{ post.url }}">Read more</a>
     </li>
   {% endfor %}
 </ul>
+
+
+<!--
+<ul class="blog-list">
+  {% for post in paginator.posts %}
+    <li>
+      <h3><a href="{{ post.url }}">{{ post.title }}</h3>
+      <img src="{{ site.baseurl }}/img/blog/{{ post.image }}"></a>
+      {{ post.excerpt | strip_html | truncatewords: 40 }}
+      <a class="link-button" href="{{ post.url }}">Read more</a>
+    </li>
+  {% endfor %}
+</ul> -->
 
 
 

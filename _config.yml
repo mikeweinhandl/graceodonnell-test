@@ -21,7 +21,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://mikeweinhandl.com/graceodonnell-test/" # the base hostname & protocol for your site, e.g. http://example.com
-permalink: title
+permalink: /blog/:title.html
 twitter_username: jekyllrb
 # github_username:  jekyll
 
@@ -31,6 +31,9 @@ markdown: kramdown
 # paginate: 1
 paginate: 4
 paginate_path: "/blog/page:num/"
+
+excerpt_separator: "<!--more-->"
+
 
 gems:
   - jekyll-feed
